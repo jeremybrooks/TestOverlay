@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F090F96139E837100EF5E2E /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F090F91139E837100EF5E2E /* UIImage+Alpha.m */; };
+		7F090F97139E837100EF5E2E /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F090F93139E837100EF5E2E /* UIImage+Resize.m */; };
+		7F090F98139E837100EF5E2E /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F090F95139E837100EF5E2E /* UIImage+RoundedCorner.m */; };
 		7F3BBFB21390159C0039A7A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3BBFB11390159C0039A7A2 /* UIKit.framework */; };
 		7F3BBFB41390159C0039A7A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3BBFB31390159C0039A7A2 /* Foundation.framework */; };
 		7F3BBFB61390159C0039A7A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3BBFB51390159C0039A7A2 /* CoreGraphics.framework */; };
@@ -20,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F090F90139E837100EF5E2E /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		7F090F91139E837100EF5E2E /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		7F090F92139E837100EF5E2E /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		7F090F93139E837100EF5E2E /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		7F090F94139E837100EF5E2E /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		7F090F95139E837100EF5E2E /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		7F3BBFAD1390159C0039A7A2 /* TestOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F3BBFB11390159C0039A7A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7F3BBFB31390159C0039A7A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,6 +61,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F090F8F139E837100EF5E2E /* UIImage-categories */ = {
+			isa = PBXGroup;
+			children = (
+				7F090F90139E837100EF5E2E /* UIImage+Alpha.h */,
+				7F090F91139E837100EF5E2E /* UIImage+Alpha.m */,
+				7F090F92139E837100EF5E2E /* UIImage+Resize.h */,
+				7F090F93139E837100EF5E2E /* UIImage+Resize.m */,
+				7F090F94139E837100EF5E2E /* UIImage+RoundedCorner.h */,
+				7F090F95139E837100EF5E2E /* UIImage+RoundedCorner.m */,
+			);
+			path = "UIImage-categories";
+			sourceTree = "<group>";
+		};
 		7F3BBFA21390159C0039A7A2 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +111,7 @@
 				7F3BBFC61390159D0039A7A2 /* TestOverlayViewController.h */,
 				7F3BBFC71390159D0039A7A2 /* TestOverlayViewController.m */,
 				7F3BBFC91390159D0039A7A2 /* TestOverlayViewController.xib */,
+				7F090F8F139E837100EF5E2E /* UIImage-categories */,
 				7F3BBFB81390159C0039A7A2 /* Supporting Files */,
 			);
 			path = TestOverlay;
@@ -131,6 +154,7 @@
 		7F3BBFA41390159C0039A7A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Jeremy Brooks";
 			};
 			buildConfigurationList = 7F3BBFA71390159C0039A7A2 /* Build configuration list for PBXProject "TestOverlay" */;
@@ -171,6 +195,9 @@
 				7F3BBFBF1390159C0039A7A2 /* main.m in Sources */,
 				7F3BBFC21390159C0039A7A2 /* TestOverlayAppDelegate.m in Sources */,
 				7F3BBFC81390159D0039A7A2 /* TestOverlayViewController.m in Sources */,
+				7F090F96139E837100EF5E2E /* UIImage+Alpha.m in Sources */,
+				7F090F97139E837100EF5E2E /* UIImage+Resize.m in Sources */,
+				7F090F98139E837100EF5E2E /* UIImage+RoundedCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +241,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -228,6 +256,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -283,6 +312,7 @@
 				7F3BBFD01390159D0039A7A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

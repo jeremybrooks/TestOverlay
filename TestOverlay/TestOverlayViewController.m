@@ -9,6 +9,8 @@
 #import "TestOverlayViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 
+#import "UIImage+Resize.h"
+
 @implementation TestOverlayViewController
 @synthesize overlayImage;
 
@@ -31,16 +33,27 @@
         // set up the overlay if user wants it
         if (self.overlayImage != nil) {
             
-            // Attempt to use the full screen
-            CGRect screenRect = [[UIScreen mainScreen] bounds];
-            UIImageView *overlay = [[UIImageView alloc] initWithImage:self.overlayImage];
+            /*
+             This seems like it should work. But it does not.
+             
+             CGRect screenRect = [[UIScreen mainScreen] bounds];
+             UIImageView *overlay = [[UIImageView alloc] initWithImage:self.overlayImage];
+             */
             
-            // attempt to make the view smaller
-            //CGRect rect = CGRectMake(100.0, 100.0, 100.0, 100.0);
-            //UIImageView *overlay = [[UIImageView alloc] initWithFrame:rect];
+            // Overlay view will be the size of the screen
+            UIImageView *overlay = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
             
-            overlay.image = overlayImage;
+            // with an image sized to fit in the viewfinder window
+            // (Resize using Trevor Harmon's UIImage+ categories)
+            overlay.image = 
+            [self.overlayImage resizedImageWithContentMode:UIViewContentModeScaleAspectFill
+                                                    bounds:CGSizeMake(320, 430) 
+                                       interpolationQuality:kCGInterpolationDefault];
+            
+            // tell the view to put the image at the top, and make it transparent
+            overlay.contentMode = UIViewContentModeTop;            
             overlay.alpha = 0.5f;
+            
             picker.cameraOverlayView = overlay;
             
             [overlay release];      
