@@ -1,0 +1,4 @@
+This project demonstrates a problem I am having when using an image as the overlay view in the UIImagePickerController. The overlay is offset by about 50 pixels.
+
+When you run the app on your iPhone, it will open the camera and allow you to take a photo. That photo will be used as the overlay view, and the camera will open again.
+

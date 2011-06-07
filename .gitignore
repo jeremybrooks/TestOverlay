@@ -1,0 +1,15 @@
+build/
+*.pyc
+*~.nib/
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.xcworkspace/
+xcuserdata/
+tmp/*
+tmp/**/*
+db/*.sqlite3
+*.swp
+*~
+.DS_Store
+
